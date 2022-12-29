@@ -1,0 +1,36 @@
+<div class='mt-5 container'>
+    <h3>Danh Sách Vé</h3>
+    <a class="text-decoration-none" href="/them-ve">Thêm Vé</a>
+    <table class='table mt-4'>
+        <thead>
+            <tr>
+                <th scope='col'>Mã Phiếu</th>
+                <th scope='col'>Mã Tài Khoản</th>
+                <th scope='col'>Ngày Giờ</th>
+                <th scope='col' >Trạng Thái</th>
+                <th scope='col' >Trạng Thái Thanh Toán</th>
+                <th scope='col' >Mã Chuyến</th>
+                <th scope='col' ></th>
+                <th scope='col' ></th>
+                {{! <th scope='col'></th>
+                <th scope='col'></th> }}
+            </tr>
+        </thead>
+        <tbody>
+            {{#each data.recordset}}
+                <tr >
+                    <td class="text-center">{{this.MaPhieu}}</td>
+                    <td>{{this.MaTK}}</td>
+                    <td>{{this.NgayGio}}</td>
+                    <td>{{this.TrangThai}}</td>
+                    <td>{{this.TTThanhToan}}</td> 
+                    <td class="text-center">{{this.MaChuyen}}</td> 
+                    <td><a href='ve/edit/{{this.MaPhieu}}' class='btn btn-link'>Sửa</a></td>
+                    <td>
+                    <a href="ve/delete/{{this.MaPhieu}}" class='btn btn-link'>Xóa</a></td>
+                </tr>
+          
+            {{/each}}
+        </tbody>
+    </table>
+</div>

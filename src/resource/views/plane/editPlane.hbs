@@ -1,0 +1,29 @@
+<div class='mt-4 container'>
+    <h3>Cập nhật Loại Máy Bay</h3>
+     {{#each data.recordset}}
+    <form method='POST' action='/may-bay/edit/{{this.MaLoaiMayBay}}?_method=PUT'>
+        {{! action chọn chỗ nó xược đến thui xong viết ở controller để xử lí cái này, kiểu viết riêng để đỡ bị lẫn }}
+        <div class='form-group mt-2'>
+            <label for='TenLoaiMayBay'>Tên Loại Máy Bay</label>
+            <input
+                type='text'
+                class='form-control'
+                value='{{this.TenLoaiMayBay}}'
+                id='TenLoaiMayBay'
+                name='TenLoaiMayBay'
+            />
+        </div>
+        <div class='form-group mt-2'>
+            <label for='SoGhe'>Số Ghế</label>
+            <input
+                type='text'
+                class='form-control'
+                id='SoGhe'
+                name='SoGhe'
+                value='{{this.SoGhe}}'
+            />
+        </div>
+        <button type='submit' class='btn btn-primary mt-4'>Lưu lại</button>
+    </form>
+     {{/each}}
+</div>

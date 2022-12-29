@@ -1,0 +1,30 @@
+<div class='mt-4 container'>
+    <h3>Thêm máy bay</h3>
+    <form method='POST' action='may-bay'>
+        {{! action để dẫn đến store bên courseController  }}
+        <div class='form-group mt-2'>
+            <label for='MaLoaiMayBay'>Mã Loại Máy Bay</label>
+            <input type='text' class='form-control' id='MaLoaiMayBay' name='MaLoaiMayBay' />
+        </div>
+        <div class='form-group mt-2'>
+            <label for='TenLoaiMayBay'>Tên Loại Máy Bay</label>
+            <input
+                type='text'
+                class='form-control'
+                id='TenLoaiMayBay'
+                name='TenLoaiMayBay'
+            />
+        </div>
+        <div class='form-group mt-2'>
+            <label for='SoGhe'>Số Ghế</label>
+            <input
+                type='text'
+                class='form-control'
+                id='SoGhe'
+                name='SoGhe'
+            />
+        </div>
+    
+        <button type='submit' class='btn btn-primary mt-4'>Thêm Máy Bay</button>
+    </form>
+</div>

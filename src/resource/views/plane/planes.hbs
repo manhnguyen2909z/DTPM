@@ -1,0 +1,27 @@
+<div class='mt-5 container'>
+    <h3>Danh Sách Máy Bay</h3>
+    <a class="text-decoration-none" href="/them-may-bay">Thêm Máy Bay</a>
+    <table class='table mt-4'>
+        <thead>
+            <tr>
+                <th scope='col'>Mã Loại Máy Bay</th>
+                <th scope='col'>Tên Loại Máy Bay</th>
+                <th scope='col'>Số Ghế</th>
+                <th scope='col'></th>
+                <th scope='col'></th>
+         
+            </tr>
+        </thead>
+        <tbody>
+            {{#each data.recordset}}
+                <tr>
+                    <td>{{this.MaLoaiMayBay}}</td>
+                    <td>{{this.TenLoaiMayBay}}</td>
+                    <td>{{this.SoGhe}}</td>
+                    <td><a href='may-bay/edit/{{this.MaLoaiMayBay}}' class='btn btn-link'>Sửa</a></td>
+                    <td><a class='btn btn-link' href="may-bay/delete/{{this.MaLoaiMayBay}}">Xóa</a></td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

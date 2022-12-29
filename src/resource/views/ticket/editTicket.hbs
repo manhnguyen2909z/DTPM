@@ -1,0 +1,45 @@
+<div class='mt-4 container'>
+    <h3>Thêm Vé</h3>
+     {{#each data.recordset}}
+
+        <form method='POST' action='/ve/edit/{{this.MaPhieu}}?_method=PUT'>
+       
+        <div class='form-group mt-2'>
+            <label for='MaTK'>Mã Tài Khoản</label>
+            <input
+                type='text'
+                class='form-control'
+                id='MaTK'
+                name='MaTK'
+                value="{{this.MaTK}}"
+            />
+        </div>
+        <div class='form-group mt-2'>
+            <label for='NgayGio'>Ngày Giờ</label>
+            <input
+                type='text'
+                class='form-control'
+                id='NgayGio'
+                name='NgayGio'
+                value="{{this.NgayGio}}"
+
+            />
+        </div>
+        <div class='form-group mt-2'>
+            <label for='TrangThai'>Trạng Thái</label>
+            <input type='text' class='form-control' id='TrangThai' name='TrangThai' value="{{this.TrangThai}}" />
+        </div>
+         <div class='form-group mt-2'>
+            <label for='TTThanhToan'>Trạng Thái Thanh Toán</label>
+            <input type='text' class='form-control' id='TTThanhToan' name='TTThanhToan' value="{{this.TTThanhToan}}" />
+        </div>
+         <div class='form-group mt-2'>
+            <label for='MaChuyen'>Mã Chuyến</label>
+            <input type='text' class='form-control' id='MaChuyen' name='MaChuyen'  value="{{this.MaChuyen}}"/>
+        </div>
+
+        <button type='submit' class='btn btn-primary mt-4'>Lưu Lại</button>
+    </form>
+     {{/each}}
+
+</div>
